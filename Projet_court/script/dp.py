@@ -2,6 +2,7 @@ import numpy as np
 from numpy.core.numerictypes import maximum_sctype
 
 # Check le pb d'une sequnce plus grande que l'autre
+# TEST AVEC RECCURENCE PUIS time.time() !
 
 seq2 = "ATGCT"
 seq1 = "ACT"
