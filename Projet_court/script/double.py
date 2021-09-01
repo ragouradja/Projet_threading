@@ -1,9 +1,7 @@
 from typing import ContextManager
 from Bio import SeqIO
 import numpy as np
-from numpy.core.numerictypes import maximum_sctype
 import pandas as pd
-from pandas.core.indexes.base import maybe_extract_name
 from scipy.spatial.distance import cdist
 import time
 
