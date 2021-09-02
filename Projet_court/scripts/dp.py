@@ -1,17 +1,18 @@
 import numpy as np
-from numpy.core.numerictypes import maximum_sctype
+import time
 
 # Check le pb d'une sequnce plus grande que l'autre
 # TEST AVEC RECCURENCE PUIS time.time() !
 
 seq2 = "ATGCT"
-seq1 = "ACT"
+seq1 = "ACTG"
 
 n1 = len(seq1)
 n2 = len(seq2)
 
 # Une colonne de plus pour les gaps
 matrix = np.zeros([n2+1,n1+1])
+start = time.time()
 
 for i in range(1,n2+1):
     for j in range(1,n1+1):
@@ -25,6 +26,7 @@ for i in range(1,n2+1):
         matrix[i][j] = max(left,up,matrix[i-1][j-1] + match)
 print(matrix)
 
+print(time.time() - start)
 
 align_seq1 = ""
 align_seq2 = ""
@@ -65,3 +67,4 @@ while(j > 0 and i > 0):
     
 print(align_seq1)
 print(align_seq2)
+print(time.time() - start)
