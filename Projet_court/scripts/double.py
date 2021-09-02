@@ -7,6 +7,12 @@ import time
 
 """
 Remplacer FOR par reccursive !
+
+A FAIRE :
+
+Remplir la matrice H !
+matrice L : OK
+
 """
 
 def pdb_to_seq(file_pdb):
