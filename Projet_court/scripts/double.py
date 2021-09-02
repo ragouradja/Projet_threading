@@ -1,4 +1,5 @@
 from Bio import SeqIO
+from Bio.SeqUtils import seq3
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import cdist
@@ -8,17 +9,17 @@ import time
 Remplacer FOR par reccursive !
 """
 
-def pdbtoseq(file):
-	with open(file, "r") as pdb:
+def pdb_to_seq(file_pdb):
+	with open(file_pdb, "r") as pdb:
 		for record in SeqIO.parse(pdb, 'pdb-atom'):
 			return record.seq
 
 
-def pdb2df(file):
+def pdb_to_df(file_pdb):
 	content = []
 	header_pdb = ["ATOM","NumATOM","NameATOM","Residue",
 				"Chain","NumResidue", "x","y","z","Occ","Temp","Atom_Element"]
-	with open(file,"r") as pdb:
+	with open(file_pdb,"r") as pdb:
 		for line in pdb:
 			if line.startswith("ATOM"):
 				items = line.split()
@@ -26,6 +27,17 @@ def pdb2df(file):
 					content.append(items)
 	df = pd.DataFrame(content, columns= header_pdb)
 	return df
+
+def fasta_to_seq(file_fasta):
+	with open(file_fasta, "r") as fasta:
+		for record in SeqIO.parse(fasta,"fasta"):
+			fasta_sequence_one_letter = record.seq
+			fasta_sequence_three_letter = seq3(fasta_sequence_one_letter)
+
+	final_sequence = [fasta_sequence_three_letter.upper()[i:i+3]
+	for i in range(0,len(fasta_sequence_three_letter),3)]
+
+	return final_sequence
 
 
 def get_coords(df):
@@ -61,7 +73,7 @@ def Hmatrix(sequence_target, matrix_dist, dope_score):
 
 
 
-def Lmatrix(sequence_target, matrix_dist, dope_score, residue_fixed = [2,2]):
+def Lmatrix(sequence_target, matrix_dist, dope_score, residue_fixed = [4,6]):
 	list_calpha = matrix_dist.columns 
 	n_col = len(list_calpha) + 1
 	n_row = len(sequence_target) + 1
@@ -73,7 +85,7 @@ def Lmatrix(sequence_target, matrix_dist, dope_score, residue_fixed = [2,2]):
 	#matrix_low[1:,residue_fixed_j] = fixed
 	target_res_fixed = sequence_target[residue_fixed[0] -1] + list_calpha[residue_fixed_j-1]  # SER2
 
-	print(target_res_fixed)
+	#print(target_res_fixed)
 	#print(matrix_low)
 	#print(matrix_dist)
 	#print(dope_score)
@@ -86,23 +98,23 @@ def Lmatrix(sequence_target, matrix_dist, dope_score, residue_fixed = [2,2]):
 				if (j < residue_fixed_j and i < residue_fixed_i) or (j > residue_fixed_j and i > residue_fixed_i):
 					actual_residue = sequence_target[i-1] + list_calpha[j-1]
 					pairs_residues = [target_res_fixed,actual_residue]
-					print(pairs_residues)
 					score = get_score(dope_score,matrix_dist)
 					left = matrix_low[i][j-1]
 					up = matrix_low[i-1][j]
 					diag = matrix_low[i-1][j-1] + score
-					print(matrix_low[i-1][j-1])
 					# max entre valeur de GAUCHE + gap, HAUT + gap ou DIAG + score DOPE
 					matrix_low[i][j] = max(diag,left,up)
 	print(matrix_low)
 
 if __name__ == "__main__":
 
-	file = "prot.pdb"
-	sequence_target = ['SER', 'ASN', 'TYR', 'VAL'] # Normalement, provient d'un fasta donc conversion 1 lettre --> 3 lettres
+	file_pdb = "prot.pdb"
+	file_fasta = "2d0a.fasta"
+	sequence_target = fasta_to_seq("2d0a.fasta")[:9]
+	print(sequence_target)
 	dope_score = pd.read_table("dope_clean.txt")
-	df = pdb2df(file)
-	coords_pdb,sequence_pdb = get_coords(df.head(4))
+	df = pdb_to_df(file_pdb)
+	coords_pdb,sequence_pdb = get_coords(df.head(9))
 	matrix_dist = matrix_distance(coords_pdb,sequence_pdb)
 	#Hmatrix(sequence_target, matrix_dist, dope_score)
 	get_score(dope_score,matrix_dist)
