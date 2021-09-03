@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Data initiale
-file = "dope.txt"
+file = "../data/dope.txt"
 
 # NOMS DE COLONNES
 # Creation des noms de colonnes --> distance à partir de 0.25 puis pas de 0.5
