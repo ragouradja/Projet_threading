@@ -30,7 +30,7 @@ final_dtf = pd.concat([CA[col], negative_dtf], axis = 1)
 print(final_dtf)
 
 # Save le dope clean --> Que les CA avec les noms de colonnes
-final_dtf.to_csv("dope_clean.txt", header = True, sep="\t")
+final_dtf.to_csv("dope_clean.txt", header = True, sep="\t", index=False)
 
 
 
