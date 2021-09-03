@@ -40,10 +40,10 @@ def fasta_to_seq(file_fasta):
 			fasta_sequence_one_letter = record.seq
 			fasta_sequence_three_letter = seq3(fasta_sequence_one_letter)
 
-	final_sequence = [fasta_sequence_three_letter.upper()[i:i+3]
+	final_sequence_three_letter = [fasta_sequence_three_letter.upper()[i:i+3]
 	for i in range(0,len(fasta_sequence_three_letter),3)]
 
-	return final_sequence
+	return fasta_sequence_one_letter,final_sequence_three_letter
 
 
 def get_coords(df):
@@ -56,18 +56,21 @@ def matrix_distance(coords_pdb, sequence_pdb):
 	matrix.index = sequence_pdb
 	return matrix
 
-def get_score(dope_score, matrix_dist, pairs_residues = ["SER2","VAL5"]):
+def get_score(dope_score, matrix_dist, pairs_residues):
 	target_res1 = pairs_residues[0][:3]
 	target_res2 = pairs_residues[1][:3]
-	calpha1 = pairs_residues[0][-1]	
-	calpha2 = pairs_residues[1][-1]	
-	distance_observed = matrix_dist[calpha1][calpha2]
+	calpha1 = pairs_residues[0][3:]	
+	calpha2 = pairs_residues[1][3:]	
+
+	distance_observed = matrix_dist[str(calpha1)][str(calpha2)]
 	for dist_col in dope_score.columns[4:]:
 		distance_values = dist_col.split("_")
 		first_distance = float(distance_values[0])
 		second_distance = float(distance_values[1])
+		if distance_observed > 15.25:
+			return 0
 		if distance_observed > first_distance and distance_observed < second_distance:
-			return float(dope_score[(dope_score["res1"] == target_res1) 
+			return  float(dope_score[(dope_score["res1"] == target_res1) 
 			& (dope_score["res2"] == target_res2)][dist_col])
 
 def Hmatrix(sequence_target, matrix_dist, dope_score):
@@ -84,7 +87,7 @@ def Hmatrix(sequence_target, matrix_dist, dope_score):
 			diag = matrix_high[i-1][j-1] + best_score
 			matrix_high[i][j] = max(diag, left, up)
 
-	print(matrix_high)
+	return matrix_high
 
 
 
@@ -113,25 +116,68 @@ def Lmatrix(sequence_target, matrix_dist, dope_score, residue_fixed = [4,6]):
 				if (j < residue_fixed_j and i < residue_fixed_i) or (j > residue_fixed_j and i > residue_fixed_i):
 					actual_residue = sequence_target[i-1] + list_calpha[j-1]
 					pairs_residues = [target_res_fixed,actual_residue]
-					score = get_score(dope_score,matrix_dist)
+					score = get_score(dope_score,matrix_dist, pairs_residues)
 					left = matrix_low[i][j-1]
 					up = matrix_low[i-1][j]
 					diag = matrix_low[i-1][j-1] + score
 					# max entre valeur de GAUCHE + gap, HAUT + gap ou DIAG + score DOPE
 					matrix_low[i][j] = max(diag,left,up)
-	print(matrix_low)
+	return matrix_low[n_row-1][n_col-1]
+
+def get_alignement(sequence_target,list_calpha,matrix_high):
+	j = matrix_high.shape[1] - 1 
+	i = matrix_high.shape[0] - 1
+	align_res = []
+	align_ca = []
+
+	print(i,j)
+
+	while i > 0 and j > 0:
+		diag = matrix_high[i-1][j-1]
+		left = matrix_high[i][j-1]
+		up = matrix_high[i-1][j]
+
+		if diag >= left and diag >= up:
+			align_ca.append(list_calpha[j-1])
+			align_res.append(sequence_target[i-1])
+
+			i -= 1
+			j -= 1
+		elif left > diag and left > diag:
+			align_ca.append(list_calpha[j-1])
+			align_res.append("-")
+			j -= 1
+		elif up > diag and up > left:
+			align_ca.append("-")
+			align_res.append(sequence_target[i-1])
+			i -= 1
+	return align_ca, align_res
+
+
+def print_alignement(align_ca, align_res):
+
+	for i in range(len(align_ca)-1,-1,-1):
+		print("{:^3s}".format(align_ca[i]), end = "")
+
+	print()
+	for i in range(0,len(align_res)):
+		print("{:^3s}".format(align_res[i]), end = "")
+	print()
 
 if __name__ == "__main__":
-
-	file_pdb = "prot.pdb"
-	file_fasta = "2d0a.fasta"
-	sequence_target = fasta_to_seq("2d0a.fasta")[:9]
-	print(sequence_target)
-	dope_score = pd.read_table("dope_clean.txt")
+	#start = time.time()
+	file_pdb = "../data/prot.pdb"
+	file_fasta = "../data/2d0a.fasta"
+	file_dope = "../data/dope_clean.txt"
+	n_res = 10
+	sequence_one_letter,sequence_three_letter = fasta_to_seq(file_fasta)
+	sequence_target = sequence_three_letter[:n_res]
+	dope_score = pd.read_table(file_dope)
 	df = pdb_to_df(file_pdb)
-	coords_pdb,sequence_pdb = get_coords(df.head(9))
+	coords_pdb,sequence_pdb = get_coords(df.head(n_res))
 	matrix_dist = matrix_distance(coords_pdb,sequence_pdb)
 	#Hmatrix(sequence_target, matrix_dist, dope_score)
-	get_score(dope_score,matrix_dist)
-	Lmatrix(sequence_target, matrix_dist, dope_score)
-
+	Hmatrice = Hmatrix(sequence_target, matrix_dist, dope_score)
+	align_ca, align_res = get_alignement(sequence_one_letter,matrix_dist.columns,Hmatrice)
+	print_alignement(align_ca, align_res)
+	#print(time.time() - start) 1.35s
