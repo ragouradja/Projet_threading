@@ -1,12 +1,29 @@
-import time
+import itertools
 import numpy as np
-def add(n):
-    return n + 5
+from multiprocessing import Pool
+import time
+from joblib import Parallel, delayed
 
-start = time.time()
-a = np.zeros((1000,1000))
+def fill_array(start_val):
+    return list(range(start_val, start_val+10))
 
-b = np.array(list(map(add,a[1]))).reshape((1000,1000))
+def fill(a,x):
+    print("DOING : ",x)
+    for i in range(a.shape[0]):
+        for j in range(a.shape[1]):
+            if i == x[0] and j == x[1]:
+                a[i][j] = -100
+            else :
+                a[i][j] = 0
 
-print(b)
-print(time.time() - start)
+    print(a)
+    return a
+if __name__=='__main__':
+    start = time.time()
+
+    a = np.zeros((5,5))
+    coords = list(itertools.product(range(1,5), repeat = 2))
+    
+    Parallel(n_jobs=1, verbose = 0)(delayed(fill)(a,[x,y]) for x,y in coords)
+    print(time.time()-  start)
+    

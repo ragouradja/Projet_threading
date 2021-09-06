@@ -11,8 +11,8 @@ def print_alignement(align_ca, align_res):
 		print("{:^3s}".format(align_res[i]), end = "")
 	print()
 
-seq2 = "AGCTGCTATGATACCGACGAT"
-seq1 = "ATCATA"
+seq2 = "CTCTAGCATTAG"
+seq1 = "GTGCACCCA"
 
 n1 = len(seq1)
 n2 = len(seq2)
@@ -48,12 +48,12 @@ while i > 0 and j > 0:
     diag = matrix[i-1][j-1]
     left = matrix[i][j-1]
     up = matrix[i-1][j]
-    if diag >= left and diag >= up:
+    if seq1[j-1] == seq2[i-1]:
         align_ca.append(seq1[j-1])
         align_res.append(seq2[i-1])
         i -= 1
         j -= 1
-    elif left > diag and left > diag:
+    elif left > diag and left > up:
         align_ca.append(seq1[j-1])
         align_res.append("-")        
         j -= 1
@@ -62,10 +62,8 @@ while i > 0 and j > 0:
         align_ca.append("-")
         align_res.append(seq2[i-1])
         i -= 1
-
-    
-
-
+    else:
+        break
 
 """
 # On remonte le long de la matrice tant qu'on est pas sur les valeurs des gaps
