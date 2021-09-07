@@ -1,0 +1,9 @@
+name: projet
+channels:
+        - defaults
+        - bioconda
+dependencies:
+        - numpy
+        - pandas
+        - biopython
+        - scipy

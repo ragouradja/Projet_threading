@@ -10,6 +10,8 @@ import random
 import copy
 from multiprocessing import Process,Pool
 from joblib import Parallel, delayed
+import sys
+
 """
 Installation CONDA et autre dependances
 Tester iterative vs parallel : pb arrondi --> aligment different !
@@ -235,7 +237,7 @@ def main(file_pdb, file_fasta):
 	print("FASTA : ",time.time() - start)
 	# PDB
 	df = pdb_to_df(file_pdb)
-	coords_pdb,sequence_pdb_ca, sequence_pdb_res = get_coords(df.head(2))
+	coords_pdb,sequence_pdb_ca, sequence_pdb_res = get_coords(df)
 	matrix_dist = matrix_distance(coords_pdb, sequence_pdb_ca)
 	matrix_check = np.zeros((20,20))
 	# Dope
@@ -254,8 +256,8 @@ def main(file_pdb, file_fasta):
 
 
 if __name__ == "__main__":
-	file_pdb = "../data/prot.pdb"
-	file_fasta = "../data/prot.fasta"
+	file_pdb = sys.argv[1]
+	file_fasta = sys.argv[2]
 
 	main(file_pdb,file_fasta)
 

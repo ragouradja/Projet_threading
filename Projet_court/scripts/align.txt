@@ -1,0 +1,55 @@
+# Sequence (Length) : SNYVIQADQQLLDALRAHYEGALSDRLPAGALFAVKRPDVVITAYRSGKVLFQGKAAEQEAAKWISGASASNETADHQ (78)
+# Fasta file : ../data/prot.fasta
+# PDB file : ../data/prot.pdb
+# Last value of High Matrix : 130.625
+# Shape of High Matrix : (79, 3)
+# Total time : 2.877s
+
+SN
+HQ
+
+
+# Sequence (Length) : SNYVIQADQQLLDALRAHYEGALSDRLPAGALFAVKRPDVVITAYRSGKVLFQGKAAEQEAAKWISGASASNETADHQ (78)
+# Fasta file : ../data/prot.fasta
+# PDB file : ../data/prot.pdb
+# Last value of High Matrix : 130.625
+# Shape of High Matrix : (79, 3)
+# Total time : 2.766s
+
+SN
+HQ
+
+
+# Sequence (Length) : SNYVIQADQQLLDALRAHYEGALSDRLPAGALFAVKRPDVVITAYRSGKVLFQGKAAEQEAAKWISGASASNETADHQ (78)
+# Fasta file : ../data/prot.fasta
+# PDB file : ../data/prot.pdb
+# Last value of High Matrix : 9704.000
+# Shape of High Matrix : (79, 79)
+# Total time : 2921.701s
+
+SNYVIQADQQLLDALRAHYEGALSDRLPAGALFAVKRPDVVITAYRSGKVLFQGKAAEQEAAKWISGASASNETADHQ
+SNYVIQADQQLLDALRAHYEGALSDRLPAGALFAVKRPDVVITAYRSGKVLFQGKAAEQEAAKWISGASASNETADHQ
+
+
+# Sequence (Length) : ALFAVKRMGVVITAY (15)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 344.000
+# Shape of High Matrix : (16, 16)
+# Total time : 6.757s
+
+ALFAVKRPDVVITAY
+ALFAVKRMGVVITAY
+
+
+# Sequence (Length) : ALFAVKRPDVVITAY (15)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 350.500
+# Shape of High Matrix : (16, 16)
+# Total time : 7.701s
+
+ALFAVKRPDVVITAY
+ALFAVKRPDVVITAY
+
+
