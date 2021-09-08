@@ -3021,3 +3021,509 @@ EKMSTAISVLLAQAVFL--L--LTSQ-R
 EKM-TLSISVLLS-LTVFLLVIVELIPST---
 EKMST-AISVLLAQ-AVFLL----L---TSQR
 
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 7.285s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 7.340s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : EKMSTAISVLLAQAVFLLLTSQR (23)
+# Fasta file : ../data/1eq8.fasta
+# PDB file : ../data/1dxz.pdb
+# Last value of High Matrix : 13416.000
+# Shape of High Matrix : (24, 33)
+# Total time : 14.207s
+# Nb of processes used : 7
+
+PTDSGEKMT-L-S-ISVLLS-L-TV-F-L-L-VI-VELI-P-ST-
+E-----KM-S-T-AISVLL-A-QA-V-F-L-L--L----T-SQ-R
+
+# Sequence (Length) : EKMSTAISVLLAQAVFLLLTSQR (23)
+# Fasta file : ../data/1eq8.fasta
+# PDB file : ../data/1dxz.pdb
+# Last value of High Matrix : 1947.000
+# Shape of High Matrix : (24, 33)
+# Total time : 1.736s
+# Nb of processes used : 7
+
+EKMTLSISVLLSLTVFLLVIVELIPST
+EKMSTAISVLLAQAVFL----LLTSQR
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 752.000
+# Shape of High Matrix : (14, 16)
+# Total time : 38.515s
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKRG-PDVG-VITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 565.500
+# Shape of High Matrix : (14, 16)
+# Total time : 1.373s
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKRG-PDVG-VITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 565.500
+# Shape of High Matrix : (14, 16)
+# Total time : 1.381s
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKRG-PDVG-VITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.158s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.110s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 5.714s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.085s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.165s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.108s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.088s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 5.475s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 22.781
+# Shape of High Matrix : (14, 3)
+# Total time : 1.072s
+# Nb of processes used : 7
+
+A----L
+GVITAY
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 74.125
+# Shape of High Matrix : (26, 3)
+# Total time : 1.178s
+# Nb of processes used : 7
+
+R----------------------S
+KCGLCERSFVEKSALSRHQRVHKN
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 74.125
+# Shape of High Matrix : (26, 3)
+# Total time : 1.123s
+# Nb of processes used : 7
+
+R----------------------S
+KCGLCERSFVEKSALSRHQRVHKN
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 2056.000
+# Shape of High Matrix : (26, 30)
+# Total time : 30.649s
+# Nb of processes used : 7
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 2056.000
+# Shape of High Matrix : (26, 30)
+# Total time : 45.923s
+# Nb of processes used : 7
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 2056.000
+# Shape of High Matrix : (26, 30)
+# Total time : 32.292s
+# Nb of processes used : 7
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 2056.000
+# Shape of High Matrix : (26, 30)
+# Total time : 30.997s
+# Nb of processes used : 7
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Fasta file : ../data/1znf_1.fasta
+# PDB file : ../data/1ard_1.pdb
+# Last value of High Matrix : 1728.000
+# Shape of High Matrix : (26, 30)
+# Total time : 32.253s
+# Nb of processes used : 7
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSALSRH-QR-VHKN
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.343s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.172s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.187s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.196s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.228s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.140s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.227s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.363s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.185s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.227s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.131s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.200s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.229s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.187s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.157s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.171s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.614s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.214s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.267s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.189s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.146s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.073s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Fasta file : ../data/prot_test.fasta
+# PDB file : ../data/prot_test.pdb
+# Last value of High Matrix : 753.000
+# Shape of High Matrix : (14, 16)
+# Total time : 3.076s
+# Nb of processes used : 7
+
+AVKRPDV-VITAY
+VKRGPDVGVITAY
+

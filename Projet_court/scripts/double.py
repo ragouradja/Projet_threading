@@ -1,20 +1,11 @@
 import itertools
-from pydoc import resolve
-from Bio import SeqIO
 import numpy as np
-from numpy.core.defchararray import title
-from numpy.core.records import array
-from numpy.lib.shape_base import _make_along_axis_idx
-from numpy.lib.utils import info
 import pandas as pd
 from scipy.spatial.distance import cdist
 import time
-import random
-import copy
 import multiprocessing as mp
 from joblib import Parallel, delayed
 import sys
-import matplotlib.pyplot as plt
 import blosum
 
 
@@ -24,11 +15,6 @@ Tester iterative vs parallel : pb arrondi --> aligment different !
 Marche pas avec WINDOWS !
 ne pas oublier dope_filter.py
 """
-def pdb_to_seq(file_pdb):
-	with open(file_pdb, "r") as pdb:
-		for record in SeqIO.parse(pdb, 'pdb-atom'):
-			return record.seq
-
 def pdb_to_df(file_pdb):
 	content = []
 	header_pdb = ["ATOM","NumATOM","NameATOM","Residue",
@@ -85,10 +71,25 @@ def get_coords(df):
 
 
 def matrix_distance(coords_pdb, sequence_pdb_ca):
-	matrix = pd.DataFrame(cdist(coords_pdb, coords_pdb,metric="euclidean"))
+	matrix = pd.DataFrame(cdist(coords_pdb, coords_pdb,metric="euclidean"), dtype = np.float16)
 	matrix.columns = sequence_pdb_ca
 	matrix.index = sequence_pdb_ca
 	return matrix
+
+def binary_search(col, beg, end, dist):
+    if beg > end:
+        return False
+    m_index = (beg + end) // 2
+    mid = col[m_index]
+    values = mid.split("_")
+    first = float(values[0])
+    second = float(values[1])
+    if first <= dist < second:
+        return mid
+    if dist < first:
+        return binary_search(col, beg,m_index-1,dist)
+    return binary_search(col, m_index+1,end,dist)
+
 
 def get_score(dope_score, matrix_dist, pairs_residues):
 	target_res1 = pairs_residues[0][:3]
@@ -96,7 +97,27 @@ def get_score(dope_score, matrix_dist, pairs_residues):
 	calpha1 = pairs_residues[0][3:]	
 	calpha2 = pairs_residues[1][3:]
 	distance_observed = matrix_dist[str(calpha1)][str(calpha2)]
-	for dist_col in dope_score.columns[4:]:
+
+	all_col =  dope_score.columns[4:]
+
+	if distance_observed > 15.25:
+		return 0
+	col_distance = binary_search(all_col,0,len(all_col) - 1,distance_observed)
+	if col_distance:
+		return  float(dope_score[(dope_score["res1"] == target_res1) 
+			& (dope_score["res2"] == target_res2)][col_distance])
+	return -10
+		
+
+
+def get_score0(dope_score, matrix_dist, pairs_residues):
+	target_res1 = pairs_residues[0][:3]
+	target_res2 = pairs_residues[1][:3]
+	calpha1 = pairs_residues[0][3:]	
+	calpha2 = pairs_residues[1][3:]
+	distance_observed = matrix_dist[str(calpha1)][str(calpha2)]
+	all_col = set(dope_score.columns[4:].tolist())
+	for dist_col in all_col:
 		distance_values = dist_col.split("_")
 		first_distance = float(distance_values[0])
 		second_distance = float(distance_values[1])
@@ -109,6 +130,7 @@ def get_score(dope_score, matrix_dist, pairs_residues):
 			return 0
 		if distance_observed < 0.25:
 			return -10
+
 
 def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 
@@ -124,7 +146,7 @@ def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 	beg_start = time.time()
 	gap = 0
 	#matrix_check = np.zeros((n_row-1,n_col-1))
-	matrix_check = do_LM_parallel(sequence_target,list_pdb_res, matrix_dist, dope_score, n_row, n_col,nproc)
+	matrix_check = do_LM_parallel(sequence_target,seq_one,list_pdb_res, matrix_dist, dope_score, n_row, n_col,nproc)
 	# FOR col : 0.8 - 0.9s --> iterative
 	# FOR col : 0.7 - 0.8s --> rec
 	for i in range(1, n_row):
@@ -144,19 +166,19 @@ def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 				matrix_backtrace[i][j] = "u"
 	return matrix_high, matrix_check,matrix_backtrace
 
-def do_LM_parallel(sequence_target,list_pdb_res,matrix_dist, dope_score,n_row,n_col,nproc):
+def do_LM_parallel(sequence_target,seq_one ,list_pdb_res,matrix_dist, dope_score,n_row,n_col,nproc):
 	coords = list(itertools.product(range(1,n_row), range(1,n_col)))
 	matrix_check = Parallel(n_jobs=nproc - 1, verbose = 0, prefer="processes")(delayed(Lmatrix)
-	(sequence_target,list_pdb_res,matrix_dist, dope_score,[fixed_i,fixed_j],
+	(sequence_target,seq_one ,list_pdb_res,matrix_dist, dope_score,[fixed_i,fixed_j],
 	n_row,n_col) for fixed_i,fixed_j in coords)
 	matrix_check = np.array(matrix_check, dtype=np.float16)
 	matrix_check = np.reshape(matrix_check, (n_row-1,n_col-1))
 	return matrix_check
    
-def Lmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score, residue_fixed, n_row, n_col):
+def Lmatrix(sequence_target, seq_one, list_pdb_res, matrix_dist, dope_score, residue_fixed, n_row, n_col):
 	list_calpha = matrix_dist.columns 
 	matrix_low = np.full([n_row,n_col], -100,dtype=np.float16)
-	seq_one = sequence_three_to_one(sequence_target)
+	start = time.time()
 	matrix_low[0][:] = np.zeros((1,n_col))
 	matrix_low[:,0] = np.zeros((1,n_row))
 	gap = 0
@@ -165,7 +187,7 @@ def Lmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score, residue_fixed
 	name_res_fixed = sequence_target[residue_fixed_i-1] + list_calpha[residue_fixed_j-1]  # SER2
 	for i in range(1,n_row):
 		for j in range(1,n_col):
-			if i == residue_fixed_i and j == residue_fixed_j:
+			if (i,j) == (residue_fixed_i,residue_fixed_j):
 				matrix_low[residue_fixed_i][residue_fixed_j] = matrix_low[i-1][j-1]
 			if (j < residue_fixed_j and i < residue_fixed_i) or (j > residue_fixed_j and i > residue_fixed_i):
 				actual_residue = sequence_target[i-1] + list_calpha[j-1]
@@ -258,11 +280,9 @@ def main(file_pdb, file_fasta,nproc):
 
 	# Matrix
 	matrix_high, matrix_check_parallel,matrix_backtrace = Hmatrix(fasta_three_letter, list_pdb_res,matrix_dist_pdb, matrix_dope,nproc)
-	print("Hmatrix : ",time.time() - start)
 	informatiions_to_write = [fasta_one_letter,file_pdb,file_fasta,
 	matrix_high[-1][-1],matrix_high.shape, time.time()-start,nproc]
 	align_pdb, align_res = get_alignement(fasta_one_letter, list_pdb_res, matrix_backtrace)
-	print("get_alignement : ",time.time() - start)
 	print_alignement(align_pdb, align_res,informatiions_to_write)
 	print(time.time()-start, matrix_high.shape,matrix_high[-1][-1])
 
