@@ -71,10 +71,26 @@ def get_coords(df):
 
 
 def matrix_distance(coords_pdb, sequence_pdb_ca):
-	matrix = pd.DataFrame(cdist(coords_pdb, coords_pdb,metric="euclidean"), dtype = np.float16)
+	matrix = pd.DataFrame(np.around(cdist(coords_pdb, coords_pdb,metric="euclidean"),decimals=2))
 	matrix.columns = sequence_pdb_ca
 	matrix.index = sequence_pdb_ca
 	return matrix
+
+def create_dict():
+	array = ['0.25_0.75', '0.75_1.25', '1.25_1.75', '1.75_2.25', '2.25_2.75', '2.75_3.25', '3.25_3.75', '3.75_4.25',
+	'4.25_4.75', '4.75_5.25', '5.25_5.75', '5.75_6.25', '6.25_6.75', '6.75_7.25', '7.25_7.75', '7.75_8.25', '8.25_8.75',
+	'8.75_9.25', '9.25_9.75', '9.75_10.25', '10.25_10.75', '10.75_11.25', '11.25_11.75', '11.75_12.25', '12.25_12.75',
+	'12.75_13.25', '13.25_13.75', '13.75_14.25', '14.25_14.75', '14.75_15.25']
+
+	value = []
+	for i in range(len(array)):
+		items = array[i].split("_")
+		new_list = [(n,array[i]) for n in np.round(np.arange(float(items[0]),float(items[1]),0.01),2)]
+		value += new_list
+
+	all = dict(value)
+	return all
+
 
 def binary_search(col, beg, end, dist):
     if beg > end:
@@ -91,7 +107,7 @@ def binary_search(col, beg, end, dist):
     return binary_search(col, m_index+1,end,dist)
 
 
-def get_score(dope_score, matrix_dist, pairs_residues):
+def get_score(dope_score, matrix_dist, pairs_residues,dope_dict):
 	target_res1 = pairs_residues[0][:3]
 	target_res2 = pairs_residues[1][:3]
 	calpha1 = pairs_residues[0][3:]	
@@ -103,6 +119,7 @@ def get_score(dope_score, matrix_dist, pairs_residues):
 	if distance_observed > 15.25:
 		return 0
 	col_distance = binary_search(all_col,0,len(all_col) - 1,distance_observed)
+	# col_distance = dope_dict[distance_observed]
 	if col_distance:
 		return  float(dope_score[(dope_score["res1"] == target_res1) 
 			& (dope_score["res2"] == target_res2)][col_distance])
@@ -135,7 +152,7 @@ def get_score0(dope_score, matrix_dist, pairs_residues):
 def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 
 	seq_one = sequence_three_to_one(sequence_target)
-
+	dico_dope = create_dict()
 	n_col = matrix_dist.shape[1] + 1
 	n_row = len(sequence_target) + 1
 	matrix_high = np.zeros([n_row,n_col], dtype=np.float16)
@@ -146,7 +163,7 @@ def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 	beg_start = time.time()
 	gap = 0
 	#matrix_check = np.zeros((n_row-1,n_col-1))
-	matrix_check = do_LM_parallel(sequence_target,seq_one,list_pdb_res, matrix_dist, dope_score, n_row, n_col,nproc)
+	matrix_check = do_LM_parallel(sequence_target,seq_one,list_pdb_res, matrix_dist, dope_score, n_row, n_col,nproc,dico_dope)
 	# FOR col : 0.8 - 0.9s --> iterative
 	# FOR col : 0.7 - 0.8s --> rec
 	for i in range(1, n_row):
@@ -166,16 +183,16 @@ def Hmatrix(sequence_target,list_pdb_res, matrix_dist, dope_score,nproc):
 				matrix_backtrace[i][j] = "u"
 	return matrix_high, matrix_check,matrix_backtrace
 
-def do_LM_parallel(sequence_target,seq_one ,list_pdb_res,matrix_dist, dope_score,n_row,n_col,nproc):
+def do_LM_parallel(sequence_target,seq_one ,list_pdb_res,matrix_dist, dope_score,n_row,n_col,nproc,dico_dope):
 	coords = list(itertools.product(range(1,n_row), range(1,n_col)))
 	matrix_check = Parallel(n_jobs=nproc - 1, verbose = 0, prefer="processes")(delayed(Lmatrix)
 	(sequence_target,seq_one ,list_pdb_res,matrix_dist, dope_score,[fixed_i,fixed_j],
-	n_row,n_col) for fixed_i,fixed_j in coords)
+	n_row,n_col,dico_dope) for fixed_i,fixed_j in coords)
 	matrix_check = np.array(matrix_check, dtype=np.float16)
 	matrix_check = np.reshape(matrix_check, (n_row-1,n_col-1))
 	return matrix_check
    
-def Lmatrix(sequence_target, seq_one, list_pdb_res, matrix_dist, dope_score, residue_fixed, n_row, n_col):
+def Lmatrix(sequence_target, seq_one, list_pdb_res, matrix_dist, dope_score, residue_fixed, n_row, n_col,dico_dope):
 	list_calpha = matrix_dist.columns 
 	matrix_low = np.full([n_row,n_col], -100,dtype=np.float16)
 	start = time.time()
@@ -192,7 +209,7 @@ def Lmatrix(sequence_target, seq_one, list_pdb_res, matrix_dist, dope_score, res
 			if (j < residue_fixed_j and i < residue_fixed_i) or (j > residue_fixed_j and i > residue_fixed_i):
 				actual_residue = sequence_target[i-1] + list_calpha[j-1]
 				pairs_residues = [name_res_fixed,actual_residue]
-				score = get_score(dope_score,matrix_dist, pairs_residues)
+				score = get_score(dope_score,matrix_dist, pairs_residues,dico_dope)
 				left = matrix_low[i][j-1] + gap
 				up = matrix_low[i-1][j] + gap
 				diag = matrix_low[i-1][j-1] 
