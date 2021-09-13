@@ -466,3 +466,20 @@ YK-C-GLCERSFVEKSA-LSR-HQRVHKN
 
 
 
+########### Options used ###########
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 2.449s
+####################################
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+
+
