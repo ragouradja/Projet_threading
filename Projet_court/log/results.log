@@ -1,0 +1,468 @@
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 4.368s
+# Nb of processes used : 7
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 4.375s
+# Nb of processes used : 7
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Percent identity : 0%
+# Last value of High Matrix : 533.420
+# Shape of High Matrix : (26, 30)
+# Total time : 5.110s
+# Nb of processes used : 7
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSR-H--Q-RVHKN
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 3.070s
+# Zscore : 1.1055870155321332
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 2.843s
+# Zscore : 6.27
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 2.807s
+# Nb of processes used : 7
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+## Options used ### PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+## Other informations ### Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 3.103s
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+## Options used ##
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+## Other informations ##
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 33%
+# Last value of High Matrix : 271.190
+# Shape of High Matrix : (14, 16)
+# Total time : 3.004s
+
+ALFAVKRPDVVITAY
+VKR-GP-DVGVITAY
+
+########### Options used ###########
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.7 Dope 0.3 Blosum
+# Zscore : 22.75
+# Secondary structure used for gap penalty
+## Other informations ##
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 85%
+# Last value of High Matrix : 150.120
+# Shape of High Matrix : (14, 16)
+# Total time : 3.038s
+
+VKR-PDV-VITAY
+VKRGPDVGVITAY
+
+########### Options used ###########
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.7 Dope 0.3 Blosum
+# Zscore : 6.92
+# Secondary structure used for gap penalty
+## Other informations ##
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 85%
+# Last value of High Matrix : 150.120
+# Shape of High Matrix : (14, 16)
+# Total time : 3.112s
+
+####################################VKR-PDV-VITAY
+VKRGPDVGVITAY
+
+
+
+########### Options used ###########
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore : 43.12
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 85%
+# Last value of High Matrix : 150.120
+# Shape of High Matrix : (14, 16)
+# Total time : 3.037s
+####################################
+
+VKR-PDV-VITAY
+VKRGPDVGVITAY
+
+
+
+########### Options used ###########
+# PDB file : ../data/prot_test.pdb
+# Fasta file : ../data/prot_test.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.7 Dope 0.3 Blosum
+# Zscore (2 runs): 3.11
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : VKRGPDVGVITAY (13)
+# Final percent identity : 85%
+# Last value of High Matrix : 150.120
+# Shape of High Matrix : (14, 16)
+# Total time : 3.015s
+####################################
+
+VKR-PDV-VITAY
+VKRGPDVGVITAY
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 44.648s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 3.986s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 3.644s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 3.991s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 4.054s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 3.823s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+
+########### Options used ###########
+# PDB file : ../data/1bnb.pdb
+# Fasta file : ../data/1bnb.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.3 Dope 0.7 Blosum
+######## Other informations ########
+# Sequence (Length) : APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW (38)
+# Final percent identity : 100%
+# Last value of High Matrix : 2067.681
+# Shape of High Matrix : (39, 39)
+# Total time : 9.389s
+####################################
+
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+
+
+
+########### Options used ###########
+# PDB file : ../data/1bnb.pdb
+# Fasta file : ../data/1bnb.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW (38)
+# Final percent identity : 100%
+# Last value of High Matrix : 9485.360
+# Shape of High Matrix : (39, 39)
+# Total time : 11.463s
+####################################
+
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+
+
+
+########### Options used ###########
+# PDB file : ../data/1bnb.pdb
+# Fasta file : ../data/1bnb.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW (38)
+# Final percent identity : 100%
+# Last value of High Matrix : 9258.360
+# Shape of High Matrix : (39, 39)
+# Total time : 9.658s
+####################################
+
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 32%
+# Last value of High Matrix : 2003.410
+# Shape of High Matrix : (26, 30)
+# Total time : 4.346s
+####################################
+
+SFVCEVCTRAFARQEHLKRHYRSHTNEK
+Y-KCGLCERSFVEKSALSRHQRVHK--N
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 33%
+# Last value of High Matrix : 2057.370
+# Shape of High Matrix : (26, 30)
+# Total time : 3.914s
+####################################
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+
+
+########### Options used ###########
+# PDB file : ../data/globulin/1lh1.pdb
+# Fasta file : ../data/globulin/1bin.fasta
+# Nb of processes used : 7
+# Blosum matrix
+######## Other informations ########
+# Sequence (Length) : VAFTEKQDALVSSSFEAFKANIPQYSVVFYTSILEKAPAAKDLFSFLANGVDPTNPKLTGHAEKLFALVRDSAGQLKASGTVVADAALGSVHAQKAVTDPQFVVVKEALLKTIKAAVGDKWSDELSRAWEVAYDELAAAIKKA (143)
+# Final percent identity : 55%
+# Last value of High Matrix : 79070.080
+# Shape of High Matrix : (144, 154)
+# Total time : 1224.837s
+####################################
+
+GALTESQAALVKSSWEEFNANIPKHTHRFFILVLEIAPAAKDLFSFLKGTSEVPQNNPELQAHAGKVFKLVYEAAIQLEVTGVVVTDATLKNLGSVHVSKGVADAHFPVVKEAILKTIKEVVGAKWSEELNSAWTIAYDELAIVIKKEMDDAA
+VAFTEKQDALVSSSFEAFKANIPQYSVVFYTSILEKAPAAKDLFSFLA-NGVDPTN-PKLTGHAEKLFALVRDSAGQLKASGTVVADAAL---GSVHAQKAVTDPQFVVVKEALLKTIKAAVGDKWSDELSRAWEVAYDELAAAIK-K----A
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Zscore (20 runs): 1.68
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 33%
+# Last value of High Matrix : 2057.370
+# Shape of High Matrix : (26, 30)
+# Total time : 47.256s
+####################################
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Zscore (30 runs): 1.5
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 33%
+# Last value of High Matrix : 2057.370
+# Shape of High Matrix : (26, 30)
+# Total time : 69.655s
+####################################
+
+FVCEVCTRAFARQEHLKRHYRSHTNEK
+YKCGLCERSFVEKSALSRHQRVHK--N
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore (30 runs): 0.59
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 28%
+# Last value of High Matrix : 800.675
+# Shape of High Matrix : (26, 30)
+# Total time : 60.514s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSALSRHQRVHK--N
+
+
+
+########### Options used ###########
+# PDB file : ../data/1ard_1.pdb
+# Fasta file : ../data/1znf_1.fasta
+# Nb of processes used : 7
+# Zscore (30 runs): -0.54
+######## Other informations ########
+# Sequence (Length) : YKCGLCERSFVEKSALSRHQRVHKN (25)
+# Final percent identity : 10%
+# Last value of High Matrix : 1009.800
+# Shape of High Matrix : (26, 30)
+# Total time : 58.796s
+####################################
+
+RSFVCEVCTRAFARQEHLKRHYRSHTNEK
+YK-C-GLCERSFVEKSA-LSR-HQRVHKN
+
+
+

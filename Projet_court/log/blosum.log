@@ -1,0 +1,197 @@
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Zscore (10 runs): 5.57
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 43.634s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore (10 runs): -30.61
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 2878.864
+# Shape of High Matrix : (59, 65)
+# Total time : 41.139s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEV-NDDCMACEACVEICPDVFEMNEEGDKAVVINP-DSDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Zscore (10 runs): 3.93
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 41.190s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore (10 runs): -3.38
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 2878.864
+# Shape of High Matrix : (59, 65)
+# Total time : 40.031s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEV-NDDCMACEACVEICPDVFEMNEEGDKAVVINP-DSDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Zscore (10 runs): 2.7
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 40.811s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore (10 runs): -19.59
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 2878.864
+# Shape of High Matrix : (59, 65)
+# Total time : 40.177s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEV-NDDCMACEACVEICPDVFEMNEEGDKAVVINP-DSDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Zscore (10 runs): 4.79
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 40.379s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Weights used : 0.7 Dope 0.3 Blosum
+# Zscore (10 runs): -1.62
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 2878.864
+# Shape of High Matrix : (59, 65)
+# Total time : 40.307s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEV-NDDCMACEACVEICPDVFEMNEEGDKAVVINP-DSDLDCVEEAIDSCPAEAIVR--S
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Zscore (10 runs): 3.31
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 12158.570
+# Shape of High Matrix : (59, 65)
+# Total time : 41.485s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEVN-DDCMACEACVEICPDVFEMNEEGDKAVVINPD-SDLDCVEEAIDSCPAEAIVR--S
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Zscore (10 runs): -31.58
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 40%
+# Last value of High Matrix : 2878.864
+# Shape of High Matrix : (59, 65)
+# Total time : 40.005s
+####################################
+
+KFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEGASQEEVEEAMDTCPVQCIHWEDE
+PIEV-NDDCMACEACVEICPDVFEMNEEGDKAVVINP-DSDLDCVEEAIDSCPAEAIVR--S
+
