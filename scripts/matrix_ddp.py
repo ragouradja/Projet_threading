@@ -8,7 +8,7 @@ __version__= "1.0"
 from dict_sequence import *
 from classes import *
 import score_align
-import double
+import main
 
 # Modules import
 import itertools
@@ -108,7 +108,7 @@ def Lmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist,array_
 				matrix_low[i][j] = (weight_dope*score) + max(diag,left,up)  + (weight_blosum*blosum.blosum62(sequence_target.seq[i-1].res,sequence_pdb_res.seq[j-1].res))
 
 	if residue_fixed_j == n_col-1:
-		time_x_line = time.time() - double.GLOBAL_START_TIME
+		time_x_line = time.time() - main.GLOBAL_START_TIME
 		x = residue_fixed_i
 		y = n_row - residue_fixed_i
 		time_remaining = y * time_x_line / x
