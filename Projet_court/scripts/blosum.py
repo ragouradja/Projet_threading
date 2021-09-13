@@ -1,3 +1,10 @@
+def blosum62(first, second):
+    first = first
+    second = second
+    f_index = ord(first) - ord('A')
+    s_index = ord(second) - ord('A')
+    return BLOSUM62_MATRIX[CHAR_INDEX[f_index]][CHAR_INDEX[s_index]]
+
 BLOSUM62_MATRIX = [[4, 0, -2, -1, -2, 0, -2, -1, -1, -1, -1, -2, -1, -1, -1, 1, 0, 0, -3, -2],
                  [0, 9, -3, -4, -2, -3, -3, -1, -3, -1, -1, -3, -3, -3, -3, -1, -1, -1, -2, -2],
                  [-2, -3, 6, 2, -3, -1, -1, -3, -1, -4, -3, 1, -1, 0, -2, 0, -1, -3, -4, -3],
@@ -23,15 +30,3 @@ CHAR_INDEX = [0, -1, 1, 2, 3, 4, 5, 6, 7, -1, 8, 9, 10,
               11, -1, 12, 13, 14, 15, 16, -1, 17, 18, -1, 19, -1]
 
 
-def blosum62(first, second):
-    first = first.upper()
-    second = second.upper()
-    f_index = ord(first) - ord('A')
-    s_index = ord(second) - ord('A')
-    return BLOSUM62_MATRIX[CHAR_INDEX[f_index]][CHAR_INDEX[s_index]]
-
-assert blosum62('A', 'Y') == -2
-assert blosum62('M', 'P') == -2
-assert blosum62('W', 'W') == 11
-assert blosum62('R', 'N') == 0
-assert blosum62('I', 'V') == 3
