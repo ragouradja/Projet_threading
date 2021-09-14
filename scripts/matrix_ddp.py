@@ -45,7 +45,8 @@ def matrix_distance(coords_pdb, sequence_pdb_ca):
 	matrix_dist.index = sequence_pdb_ca.seq
 	return matrix_dist
 
-def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_score,options):
+def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca,
+ matrix_dist, dope_score,options):
 	"""Fill the High matrix
 
 	Each position of High matrix is a fixed target residue on the template
@@ -121,7 +122,8 @@ def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_
 			left = matrix_high[i][j-1] + array_gap[j-1]
 			up = matrix_high[i-1][j] + array_gap[j-1]
 			best_score = matrix_check[i-1][j-1]
-			diag = matrix_high[i-1][j-1]  + (weight_dope*best_score) + (weight_blosum*blosum.blosum62(sequence_target.seq[i-1].res,sequence_pdb_res.seq[j-1].res))
+			diag = matrix_high[i-1][j-1]  + (weight_dope*best_score) \
+				 + (weight_blosum*blosum.blosum62(sequence_target.seq[i-1].res,sequence_pdb_res.seq[j-1].res))
 			matrix_high[i][j] =  max(diag, left, up)  
 			if matrix_high[i][j] == diag:
 				matrix_backtrack[i][j] = "d"
@@ -131,7 +133,8 @@ def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_
 				matrix_backtrack[i][j] = "u"
 	return matrix_high, matrix_backtrack
 
-def do_LM_parallel(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, array_gap,dope_score,weight,n_row,n_col,options):
+def do_LM_parallel(sequence_target,sequence_pdb_res,sequence_pdb_ca,
+ matrix_dist, array_gap,dope_score,weight,n_row,n_col,options):
 
 	coords_ij = itertools.product(range(1,n_row), range(1,n_col))
 	print("Filling all low matrix in paralell...")
@@ -143,7 +146,8 @@ def do_LM_parallel(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist
 	return matrix_check
 
 
-def Lmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist,array_gap, dope_score,weight, residue_fixed, n_row, n_col):
+def Lmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca,
+ matrix_dist,array_gap, dope_score,weight, residue_fixed, n_row, n_col):
 	"""Fill the High matrix
 
 	For each position in High matrix, a full Low matrix is filled considering 
@@ -197,13 +201,16 @@ def Lmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist,array_
 		for j in range(1,n_col):
 			if (i,j) == (residue_fixed_i,residue_fixed_j):
 				matrix_low[residue_fixed_i][residue_fixed_j] = matrix_low[i-1][j-1]
-			if (j < residue_fixed_j and i < residue_fixed_i) or (j > residue_fixed_j and i > residue_fixed_i):
+			if (j < residue_fixed_j and i < residue_fixed_i) \
+			or (j > residue_fixed_j and i > residue_fixed_i):
 				pairs_residues = [(residue_fixed_i,residue_fixed_j),(i,j)]
-				score = score_align.get_score(sequence_target, sequence_pdb_ca, dope_score, matrix_dist, pairs_residues)
+				score = score_align.get_score(sequence_target,
+				 sequence_pdb_ca, dope_score, matrix_dist, pairs_residues)
 				left = matrix_low[i][j-1] + array_gap[j-1]
 				up = matrix_low[i-1][j] + array_gap[j-1]
 				diag = matrix_low[i-1][j-1] 
-				matrix_low[i][j] = (weight_dope*score) + max(diag,left,up)  + (weight_blosum*blosum.blosum62(sequence_target.seq[i-1].res,sequence_pdb_res.seq[j-1].res))
+				matrix_low[i][j] = (weight_dope*score) + max(diag,left,up) \
+					+ (weight_blosum*blosum.blosum62(sequence_target.seq[i-1].res,sequence_pdb_res.seq[j-1].res))
 
 	if residue_fixed_j == n_col-1:
 		time_x_line = time.time() - main.GLOBAL_START_TIME

@@ -71,8 +71,8 @@ class Sequence:
     def __init__(self,sequence,filename):
         """Constructor of Sequence
 
-        The attribute self.seq is either for one letter sequence of amino acid or sequence of alpha carbon
-        from PDB        
+        The attribute self.seq is either for one letter sequence of amino acid
+        or sequence of alpha carbon from PDB        
 
         Parameters
         ----------
@@ -100,7 +100,9 @@ class Sequence:
         return "".join([str(x) for x in self.seq])
 
 class Sequence_Residue(Sequence):
-    """Class Sequence_Residue inherited from Sequence class to represent all sequence of amino acids"""
+    """Class Sequence_Residue inherited from Sequence class
+    to represent all sequence of amino acids
+    """
 
     def __init__(self, sequence, filename):
         """Constructor of Sequence_Residue
@@ -124,7 +126,9 @@ class Sequence_Residue(Sequence):
             self.seq3.append(res.to_three())
 
     def shuffle_seq(self):        
-        """Update three letter sequence after shuffling one letter sequence by calling superclass method"""
+        """Update three letter sequence after shuffling one letter sequence
+        by calling superclass method
+        """
         super().shuffle_seq()
         self.seq3 = []
         for res in self.seq:

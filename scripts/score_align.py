@@ -95,8 +95,9 @@ def get_perc_id(first_align_pdb, first_align_res):
 def get_weigth(perc_id):
 	"""Determinate weights to use to balance Dope and Blosum scores
 
-	Blosum score is favored if the inital percent identity between sequences is high, otherwise, Dope score
-	is favored for very low inital percent identity.
+	Blosum score is favored if the inital percent identity between
+	sequences is high, otherwise, Dope score is favored for very
+	low inital percent identity.
 
     Parameters
     ----------
@@ -255,7 +256,8 @@ def get_score(sequence_target,sequence_pdb_ca,dope_score, matrix_dist ,pairs_res
 	return  float(dope_score[colname][index_res])
 		
 
-def distribution(sequence_target, sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_score,options):
+def distribution(sequence_target, sequence_pdb_res,sequence_pdb_ca,
+ matrix_dist, dope_score,options):
 	"""Compute shuffling runs for zscore
 
 	Each shuffling run give a score from the best score of high matrix
@@ -294,7 +296,8 @@ def distribution(sequence_target, sequence_pdb_res,sequence_pdb_ca, matrix_dist,
 		print("Sequence shuffling ...")
 		shuffled_sequence.shuffle_seq()
 
-		HM, _  = matrix_ddp.Hmatrix(shuffled_sequence, sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_score,options)
+		HM, _  = matrix_ddp.Hmatrix(shuffled_sequence, sequence_pdb_res,
+		sequence_pdb_ca, matrix_dist, dope_score,options)
 		value.append(HM[-1][-1])
 	return value
 
