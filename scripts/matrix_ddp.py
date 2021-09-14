@@ -39,7 +39,7 @@ def matrix_distance(coords_pdb, sequence_pdb_ca):
 	matrix_dist : Numpy matrix
 		Matrix of pair distance between all alpha carbon from PDB
 	"""
-	
+	print("Computing matrix distance...")
 	matrix_dist = pd.DataFrame(cdist(coords_pdb, coords_pdb,metric="euclidean"))
 	matrix_dist.columns = sequence_pdb_ca.seq
 	matrix_dist.index = sequence_pdb_ca.seq
@@ -86,7 +86,6 @@ def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_
 	matrix_backtrack : Numpy matrix
 		Backtracking matrix to find the final alignment
 	"""
-	
 	n_col = sequence_pdb_res.length + 1
 	n_row = sequence_target.length + 1
 	if options.blosum:
@@ -115,6 +114,7 @@ def Hmatrix(sequence_target,sequence_pdb_res,sequence_pdb_ca, matrix_dist, dope_
 	matrix_backtrack[0,1:] = "l"
 	matrix_backtrack[1:,0] = "u"
 	matrix_backtrack[0,0] = "x"
+	print("Filling High matrix...")
 
 	for i in range(1, n_row):
 		for j in range(1, n_col):
