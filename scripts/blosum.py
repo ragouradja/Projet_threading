@@ -1,4 +1,19 @@
 def blosum62(first, second):
+    """Get the blosum score from two amino acids
+
+	Each shuffling run give a score from the best score of high matrix
+
+	Parameters
+	----------
+    first : str
+        One letter amino acid
+    second : str
+        One letter amino acid
+	Returns
+	-------
+	int
+		Blosum score for two amino acid
+	"""
     first = first
     second = second
     f_index = ord(first) - ord('A')

@@ -1,0 +1,19 @@
+########### Options used ###########
+# PDB file : ../data/growth_factor/1ixa.pdb
+# Fasta file : ../data/growth_factor/1fsb.fasta
+# Nb of processes used : 5
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+######## Other informations ########
+# Sequence (Length) : TASCQDMSCSKQGECLETIGNYTCSCYPGFYGPECEYVRE (40)
+# Final percent identity : 12%
+# Last value of High Matrix : 1849.995
+# Shape of High Matrix : (41, 40)
+# Total time : 10.753s
+####################################
+
+VDGDQCESNPCLNGGSCKDDINSYECWCP-FGFEGKNCEL
+TASCQDMSCSKQGECLETIGNYTCSCYPGFYGPECEYVRE
+
+
+

@@ -1,53 +1,50 @@
+"""Extracting informations from log file with regular expression"""
+
 __authors__ = "Ragousandirane RADJASANDIRANE"
 __contact__ = "radja.ragou@gmail.com"
 __date__ = "14/09/2021"
 __version__= "1.0"
 
 # Modules import
-from multiprocessing import cpu_count
 import re
 import matplotlib.pyplot as plt
 
 def extract_cpu():
+    """Regular expression for extract CPU usage"""
     return re.compile(r"^# Nb (\w|\s+)+ : (\d)")
     
 def extract_id():
+    """Regular expression for extract final percent identity"""
     return re.compile(r"^# (Final [\w|\s]+) : (\d+)%")
 
-
 def extract_zscore():
+    """Regular expression for extract zscore"""
     return re.compile(r"^# (Zscore) \((\d+) \w+\): (-?\d.\d)")
 
 def extract_hmatrix():
+    """Regular expression for extract Best score of High Matrix"""
     return re.compile(r"^# (Last [\w|\s]+) : (\d+.\d+)")
 
 def extract_time():
+    """Regular expression for extract total time of computation"""
     return re.compile(r"^# (\w* time : )(\d+.\d+)s")
 
-def extract_blosum():
-    return re.compile(r"^# Blosum Matrix")
-
 def extract_weights():
+    """Regular expression for extract weights used"""
     return re.compile(r"^#( Weights \w+ ): (\d.\d) \w+ (\d.\d) \w+")
     
-def extract_dssp():
-    return re.compile(r"^# Secondary [\w|\s]+")
-
 
 
 def extract_results(file_log):
-    
+    """Extraction informations"""
+
     id = extract_id()
     zscore = extract_zscore()
     hmatrix = extract_hmatrix()
     time_align = extract_time()
-    blosum = extract_blosum()
     weights = extract_weights()
-    dssp = extract_dssp()
     cpu = extract_cpu()
 
-    blosum_read = False
-    dssp_read = False  
     id_list = []
     zscore_list = []
     hmatrix_list = []
@@ -61,9 +58,7 @@ def extract_results(file_log):
             zscore_line = zscore.search(line)
             hmatrix_line = hmatrix.search(line)
             time_line = time_align.search(line)
-            blosum_line = blosum.search(line)
             weights_line = weights.search(line)
-            dssp_line = dssp.search(line)
             cpu_line = cpu.search(line)
 
             if id_line:
@@ -86,6 +81,8 @@ def extract_results(file_log):
     return id_list,zscore_list,hmatrix_list,time_list,weights_list,cpu_list
 
 def plot_time(cpu_list,time_list):        
+    """Plotting Time by CPU usage"""
+
     plt.plot(cpu_list,time_list)
     plt.title("Execution time over number of CPU (79x79 matrix)")
     plt.xlabel("Number of CPU")
@@ -93,6 +90,8 @@ def plot_time(cpu_list,time_list):
     plt.show()
 
 def plot_weights(weights_list,id_list,hmatrix_list):
+    """Plotting Score and percent identity by weights used"""
+
     dico = {}
     weights_list = [("1_1")]  + weights_list
     weights_list = [("1_0")]  + weights_list
@@ -128,13 +127,22 @@ def addlabels(x,y):
         plt.text(i,y[i]*50,f"{y[i]}%", ha = 'center')
 
 if __name__ == "__main__":
-    logfolder = "../log/"
+    log_folder = "../log/analyzed/"
     file_weights = "weight.log"
     file_time = "plt_time64.log"
-    file_options = "with_options.log"
+    file_options = "dssp.log"
     file_zscore = "zscore.log"
-    file_log = f"{logfolder}{file_zscore}"  
+
+    # Change the file to load correct results to plot
+    file_log = f"{log_folder}{file_weights}"  
+
+    # Extracting informations from log file
     id_list,zscore_list,hmatrix_list,\
     time_list,weights_list,cpu_list = extract_results(file_log)
 
-    print(zscore_list)
+    # Load file_time
+    #plot_time(cpu_list,time_list)
+
+    # Load file_weights
+    plot_weights(weights_list,id_list,hmatrix_list)
+    

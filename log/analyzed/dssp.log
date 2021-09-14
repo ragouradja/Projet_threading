@@ -1,0 +1,107 @@
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Zscore (10 runs): -0.0
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 9%
+# Last value of High Matrix : 2443.580
+# Shape of High Matrix : (59, 65)
+# Total time : 42.420s
+####################################
+
+ARKFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEG-ASQEEVEEAMDTCPVQCIHWEDE
+P-IEVNDD-CMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEA--ID-SCPAEAIVRS--
+
+
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Zscore (10 runs): -0.84
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 9%
+# Last value of High Matrix : 2443.580
+# Shape of High Matrix : (59, 65)
+# Total time : 41.388s
+####################################
+
+ARKFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEG-ASQEEVEEAMDTCPVQCIHWEDE
+P-IEVNDD-CMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEA--ID-SCPAEAIVRS--
+
+
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Zscore (10 runs): -0.72
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 9%
+# Last value of High Matrix : 2443.580
+# Shape of High Matrix : (59, 65)
+# Total time : 41.862s
+####################################
+
+ARKFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEG-ASQEEVEEAMDTCPVQCIHWEDE
+P-IEVNDD-CMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEA--ID-SCPAEAIVRS--
+
+
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Zscore (10 runs): -0.83
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 9%
+# Last value of High Matrix : 2443.580
+# Shape of High Matrix : (59, 65)
+# Total time : 41.624s
+####################################
+
+ARKFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEG-ASQEEVEEAMDTCPVQCIHWEDE
+P-IEVNDD-CMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEA--ID-SCPAEAIVRS--
+
+
+
+
+
+
+########### Options used ###########
+# PDB file : ../data/1fxr.pdb
+# Fasta file : ../data/1fxd.fasta
+# Nb of processes used : 8
+# Zscore (10 runs): -0.4
+# Secondary structure used for gap penalty
+######## Other informations ########
+# Sequence (Length) : PIEVNDDCMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEAIDSCPAEAIVRS (58)
+# Final percent identity : 9%
+# Last value of High Matrix : 2443.580
+# Shape of High Matrix : (59, 65)
+# Total time : 45.281s
+####################################
+
+ARKFYVDQDECIACESCVEIAPGAFAMDPEIEKAYVKDVEG-ASQEEVEEAMDTCPVQCIHWEDE
+P-IEVNDD-CMACEACVEICPDVFEMNEEGDKAVVINPDSDLDCVEEA--ID-SCPAEAIVRS--
+
+
+

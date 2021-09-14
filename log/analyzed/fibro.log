@@ -1,0 +1,39 @@
+########### Options used ###########
+# PDB file : ../data/fibronectin/1cfb.pdb
+# Fasta file : ../data/fibronectin/1ten.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+######## Other informations ########
+# Sequence (Length) : RLDAPSQIEVKDVTDTTALITWFKPLAEIDGIELTYGIKDVPGDRTTIDLTEDENQYSIGNLKPDTEYEVSLISRRGDMSSNPAKETFTT (90)
+# Final percent identity : 6%
+# Last value of High Matrix : 9830.901
+# Shape of High Matrix : (91, 206)
+# Total time : 787.663s
+####################################
+
+ITCQADKAEIHWEQQGDNRSPILHYTIQFNTSFTPASWDAAYEKVPNTDSSFVVQMSPWANYTFRVIAFNKIGASPPSAHSDSCTTQPDVPFKNPDNVVGQGTEPNNLVISWTPMPEIEHNAPNFHYYVSWKRDIPAAAWENNNIFDWRQNNIVIADQPTFVKYLIKVVAINDRGESNVAAEEVVGYSGEDR
+R------L---D------A-----P-S-QIE-V--K---D-V----T-DT---T-A-----L----I-T---W---F--K-P-L-A-E------ID---G-I-ELT---YGI-K-D-V-P--G-D---R-T-T-ID-L-T-ED--E-N-QYSI-GNLKP-D-TE--YEVSLISRRGDMSSNPAKET--F-TT
+
+
+
+########### Options used ###########
+# PDB file : ../data/fibronectin/1pinA.pdb
+# Fasta file : ../data/fibronectin/1e0lA.fasta
+# Nb of processes used : 7
+# Blosum matrix
+# Weights used : 0.9 Dope 0.1 Blosum
+# Chain selected for template : A
+######## Other informations ########
+# Sequence (Length) : GATAVSEWTEYKTADGKTYYYNNRTLESTWEKPQELK (37)
+# Final percent identity : 1%
+# Last value of High Matrix : 1725.141
+# Shape of High Matrix : (38, 154)
+# Total time : 87.939s
+####################################
+
+EKRMSRSSGRVYYFNHITNASQWERPSGGKNGQGEPARVRCSHLLVKHSQSRRPSSWRQEKITRTKEEALELINGYIQKIKSGEEDFESLASQFSDCSSAKARGDLGAFSRGQMQKPFEDASFALRTGEMSGPVFTDSGIHIILRTE
+G---------------A--T-------------------AVS---E-WT-EY----K-T--A-D-----G---------K--T---Y---Y--Y----N--N--R--------T---L-ESTW-E--K---P----Q-E--L----K
+
+
+
