@@ -83,7 +83,6 @@ def main():
 	options.cpu] + informatiions_to_write
 	align_pdb, align_res = get_alignment(seq_fasta, seq_pdb_res, matrix_backtrack)
 	print_alignment(align_pdb, align_res,informatiions_to_write,options)
-	print(time.time()-start, matrix_high.shape,matrix_high[-1][-1])
-
+	print("\nCheck the {} file".format(options.log))
 if __name__ == "__main__":
 	main()
