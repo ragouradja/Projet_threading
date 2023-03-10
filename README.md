@@ -39,7 +39,7 @@ For a simple usage, give a PDB and Fasta file :
     7 CPUs will be use.
     All results are going to be written in ../log/results.log
 
-    Filling all low matrix in paralell...
+    Filling all low matrix in parallel...
     Time remaining (estimated): 6.05s
     Time remaining (estimated): 4.37s
     Time remaining (estimated): 1.23s
