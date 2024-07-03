@@ -28,12 +28,6 @@ import multiprocessing as mp
 from joblib import Parallel, delayed
 
 
-
-"""
-INSTALLER DSSP !!
-Installation CONDA et autre dependances
-ne pas oublier dope_filter.py
-"""
 GLOBAL_START_TIME = time.time()
 
 def main():
